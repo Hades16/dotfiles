@@ -1,0 +1,33 @@
+#!/bin/bash
+
+#Usage: m4a2mp3 <file>
+
+#Hint: find . -name "*.m4a" -exec m4a2mp3 "{}" \;
+
+FULLPATH=$1
+NEWFULLPATH=${FULLPATH%.m4a}.mp3
+
+FILENAME=$(basename "$FULLPATH")
+NEWFILENAME=$(basename "$NEWFULLPATH")
+
+green='\x1B[0;32m'
+red='\x1B[0;31m'
+NC='\x1B[0m' # No Color
+
+if [ -a "${FULLPATH}" ];
+then
+  echo -n "Converting '${FILENAME}' to '${NEWFILENAME}'..."
+  ffmpeg -loglevel panic -y -i "${FULLPATH}" -acodec libmp3lame -ab 320 "${NEWFULLPATH}" 
+  if [ "$?" -eq "0" ];
+  then
+    echo -e "${green}successful${NC}!"
+    rm "${FULLPATH}"
+  else
+    echo -e "${red}unsuccessful${NC}!"  >&2
+  fi
+fi
+
+unset FULLPATH
+unset NEWFULLPATH
+unset FILENAME
+unset NEWFILENAME
