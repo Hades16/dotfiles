@@ -4,7 +4,6 @@ This repo is inspired from [@pfleidi's](http://github.com/pfleidi) dotfiles for:
 
 - zsh
 - vim
-- GNU screen
 
 Under dotfiles/bin there are some useful scripts and tools.
 
