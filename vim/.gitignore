@@ -1,0 +1,5 @@
+backup/.*
+backup/*
+!backup/.placeholder
+tmp/*
+!tmp/.placeholder
