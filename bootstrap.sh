@@ -4,6 +4,16 @@ dir=$(dirname $0)
 dotdir=$($dir/bin/realpath $dir)
 temp=/tmp
 
+# Set up zsh shell environment
+if [ -d $HOME/.oh-my-zsh ]; then
+  printf "OH-MY-ZSH is already installed, only updating ...\n"
+  zsh $HOME/.oh-my-zsh/tools/upgrade.sh
+else
+  printf "Installing OH-MY-ZSH\n"
+  git clone git://github.com/robbyrussell/oh-my-zsh.git $HOME/.oh-my-zsh
+  rm $HOME/.zshrc*
+fi
+
 # Link dotfiles and special folders in $HOME if not exists
 for file in $dotdir/*; do
   filename=$(basename $file)
@@ -25,16 +35,6 @@ for file in $dotdir/*; do
 done
 chsh -s /bin/zsh
 source $HOME/.zshrc
-
-# Set up zsh shell environment
-if [ -d $HOME/.oh-my-zsh ]; then
-  printf "OH-MY-ZSH is already installed, only updating ...\n"
-  zsh $HOME/.oh-my-zsh/tools/upgrade.sh
-else
-  printf "Installing OH-MY-ZSH\n"
-  git clone git://github.com/robbyrussell/oh-my-zsh.git $HOME/.oh-my-zsh
-  rm $HOME/.zshrc*
-fi
 
 # Add themes to oh-my-zsh
 for file in $dotdir/zsh/themes/*; do
