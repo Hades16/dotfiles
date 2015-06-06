@@ -78,4 +78,8 @@ type fortune &>/dev/null && fortune -a
 # load grc aliases for colored shell output
 type grc &>/dev/null && source $HOME/.zsh/grc_aliases.zsh
 
+if [ "$(uname)" == "Darwin" ]; then
+  source "`brew --prefix`/etc/grc.bashrc"
+fi
+
 # EOF

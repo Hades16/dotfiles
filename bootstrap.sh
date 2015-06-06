@@ -89,4 +89,8 @@ if [ "$(uname)" == "Darwin" ]; then
   brew cask install $(cat Caskfile|grep -v "#")
   brew cleanup
   brew cask cleanup
+  brew install grc
+else
+  apt-get install grc
+  echo 'You have to restart your machine for grc to work.'
 fi
