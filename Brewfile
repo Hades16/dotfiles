@@ -17,3 +17,4 @@ wget
 ffmpeg
 ffmpeg2theora
 emacs
+grc
