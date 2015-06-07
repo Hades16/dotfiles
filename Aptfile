@@ -1,6 +1,18 @@
-vim
-emacs
+# Essential tools
 htop
 silversearcher-ag
 ssh
 grc
+
+# Editors
+vim
+emacs
+
+# Development tools
+g++
+
+## Python
+virtualenv
+python-pip
+python3
+python3-pip
