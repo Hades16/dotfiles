@@ -19,7 +19,8 @@ for file in $dotdir/*; do
   filename=$(basename $file)
   dotfile=$HOME/.$filename
   if [ $filename = $(basename $0) -o $filename = "README.md"\
-    -o $filename = "Brewfile"     -o $filename = "Caskfile" ]; then
+    -o $filename = "Brewfile"     -o $filename = "Caskfile"\
+    -o $filename = "Aptfile" ]; then
     continue
   fi
   if [ -e $dotfile ]; then
