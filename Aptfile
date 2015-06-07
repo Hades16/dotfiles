@@ -1,5 +1,6 @@
 # Essential tools
 htop
+strace
 silversearcher-ag
 ssh
 grc
