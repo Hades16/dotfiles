@@ -69,6 +69,13 @@ fi
 if [ -r /etc/hosts ]; then
     hosts=( $hosts $(cat /etc/hosts | grep -v '^\#' | awk '{print $2}') )
 fi
+if [ -d $HOME/.ssh ]; then
+  for file in $HOME/.ssh/*; do
+    if [ "$file" != "known_hosts" -o "$file" != "authorized_keys" ]; then
+      ssh-add $file > /dev/null 2>&1
+    fi
+  done
+fi
 
 zstyle '*' hosts $hosts
 #zstyle ':completion:*:*:*:*:*' menu complete
