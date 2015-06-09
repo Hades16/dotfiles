@@ -18,3 +18,8 @@ ffmpeg
 ffmpeg2theora
 emacs
 grc
+
+# network stuff
+wakeonlan
+nmap
+arp-scan

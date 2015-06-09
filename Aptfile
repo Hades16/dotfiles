@@ -4,6 +4,7 @@ strace
 silversearcher-ag
 ssh
 grc
+wakeonlan
 
 # Editors
 vim
