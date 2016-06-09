@@ -41,3 +41,5 @@
 [rerere]
 	enabled = 1
 	autoupdate = true
+[mergetool]
+	keepBackup = true
