@@ -10,5 +10,4 @@ alias more="less -r"
 alias ut='bsdtar -vx -f'
 alias httpserver='python -mSimpleHTTPServer'
 alias vi='vim'
-alias pip='pip3'
-alias python='python3'
+alias updatedb='sudo /usr/libexec/locate.updatedb'
