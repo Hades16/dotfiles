@@ -53,7 +53,7 @@ export EDITOR=emacs
 export PAGER=less
 
 # Put custom $PATH settings into ~/.zprofile or ~/.zshrc.local
-export PATH=$PATH:$HOME/.bin:$HOME/.mac:/usr/texbin
+export PATH=$PATH:$HOME/.bin:$HOME/.mac:/Library/TeX/Root/bin/x86_64-darwin
 
 #077 would be more secure, but 022 is generally quite realistic
 umask 022
@@ -76,6 +76,12 @@ if [ -d $HOME/.ssh ]; then
     fi
   done
 fi
+
+# Python virtual environment
+export WORKON_HOME=~/.virtualenvs
+source /usr/local/bin/virtualenvwrapper.sh
+
+[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
 zstyle '*' hosts $hosts
 #zstyle ':completion:*:*:*:*:*' menu complete
