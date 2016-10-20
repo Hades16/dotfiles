@@ -1,29 +1,42 @@
 # Tools
 bartender
 spectacle
-#cleanmymac
+cleanmymac
 dropbox
 gpgtools
 teamviewer
+skype
 tower
-vmware-fusion
+#vmware-fusion
 iterm2
-trim-enabler
+#trim-enabler
 forklift
 1password
 angry-ip-scanner
 java
 mactex
+betterzip
+diffmerge
+handbrake
+tunnelblick
+
 # Multimedia
 adapter
-spotify
-spotify-notifications
+#spotify
+#spotify-notifications
 vlc
+
 # Editors
 atom
-0xed
+#0xed
 texnicle
 emacs
+freecad
+macvim
+
 # Internet
 google-chrome
 airmail-amt
+
+# Picture editors
+gimp
