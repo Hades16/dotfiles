@@ -53,7 +53,8 @@ export EDITOR=emacs
 export PAGER=less
 
 # Put custom $PATH settings into ~/.zprofile or ~/.zshrc.local
-export PATH=$PATH:$HOME/.bin:$HOME/.mac:/Library/TeX/Root/bin/x86_64-darwin
+export PATH=$PATH:$HOME/.bin:$HOME/.mac:/Library/TeX/Root/bin/x86_64-darwin:/usr/local/opt/coreutils/libexec/gnubin
+export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:$MANPATH
 
 #077 would be more secure, but 022 is generally quite realistic
 umask 022
@@ -90,5 +91,10 @@ zstyle '*' hosts $hosts
 type fortune &>/dev/null && fortune -a
 # load grc aliases for colored shell output
 type grc &>/dev/null && source $HOME/.zsh/grc_aliases.zsh
+
+# misc settings for tools installed via homebrew
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+brew services restart dbus
+. /usr/local/etc/grc.bashrc
 
 # EOF
