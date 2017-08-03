@@ -86,7 +86,6 @@ if [ "$(uname)" == "Darwin" ]; then
   brew install $(cat Brewfile|grep -v "#")
   brew install caskroom/cask/brew-cask
   # Process Caskfile
-  brew cask update
   brew cask install $(cat Caskfile|grep -v "#")
   brew cleanup
   brew cask cleanup

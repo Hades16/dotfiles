@@ -94,7 +94,5 @@ type grc &>/dev/null && source $HOME/.zsh/grc_aliases.zsh
 
 # misc settings for tools installed via homebrew
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
-brew services restart dbus
-. /usr/local/etc/grc.bashrc
 
 # EOF
