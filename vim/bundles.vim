@@ -7,7 +7,7 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 Bundle 'SudoEdit.vim'
-Bundle 'itspriddle/vim-marked
+Bundle 'itspriddle/vim-marked'
 
 " Snippets
 Bundle "MarcWeber/vim-addon-mw-utils"
