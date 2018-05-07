@@ -78,12 +78,6 @@ if [ -d $HOME/.ssh ]; then
   done
 fi
 
-# Python virtual environment
-export WORKON_HOME=~/.virtualenvs
-source /usr/local/bin/virtualenvwrapper.sh
-
-[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
-
 zstyle '*' hosts $hosts
 #zstyle ':completion:*:*:*:*:*' menu complete
 
